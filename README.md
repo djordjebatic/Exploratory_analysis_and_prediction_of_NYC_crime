@@ -54,15 +54,18 @@ CatBoost is an algorithm for gradient boosting on decision trees. It is develope
 ## Implementation
 
 ### Preprocessing and feature engeneering
-### EDA
-### Prediction
+Dataset contains many columns with over a million null values. Those columns were removed as well as columns containing police codes. Spatial data contained many values that were not in bounding box of NYC and those were removes as well. Only dates after 2006 were used since there are many inconsistencies in data before. Highest quality data recording is the one after 2011 but i decided to include the dates before since i wanted to observe the crime trends. Crime classes that were ambiguously defined e.g. 'Other state laws' or 'Administrative laws' were removed as well as very rare crimes. Crimes that could be classified as an existing higher count crime were added to that class. Feature engeneering consisted of addind columns such as minute, hour, day, day of the week, month, year and days since begining of crime recording. Crimes were encoded to values between 0 and 35. Column n_days was normalized. Longitudes and latitudes were transformed as three dimensional represetation as advised [here](https://datascience.stackexchange.com/questions/13567/ways-to-deal-with-longitude-latitude-feature). Ciclical data such as months, days, hours, minutes i represended as ordinal projections. 
 
-Add additional notes about how to deploy this on a live system
+### EDA
+Here i analyzed the crime trends, spatial distribution of crime as well as time of day that they were commited.
+
+### Prediction
+Algoriths used for prediction were Random Forest, Extra Tree Classifier, Bernoulli Naïve Bayes, LightGBM and Catboost. Base models and models with tuned parameteres were compared. Best performed model was LightGBM with cross-entropy log-loss of 2.3204.
 
 ## Evaluation Metric
 Models are evaluated using the multi-class logarithmic loss. Each incident has been labeled with one true class. For each incident, you must submit a set of predicted probabilities (one for every class). The formula is:
 
-![alt text](http://www.sciweavers.org/upload/Tex2Img_1561670586/render.png)
+![alt text](http://www.sciweavers.org/upload/Tex2Img_1562236240/render.png)
 
 where N is the number of cases in the test set, M is the number of class labels, log is the natural logarithm, ![alt text](http://www.sciweavers.org/upload/Tex2Img_1561670812/render.png) is 1 if observation i is in class j and 0 otherwise, and ![alt text](http://www.sciweavers.org/upload/Tex2Img_1561670854/render.png) is the predicted probability that observation i belongs to class j.
 
@@ -72,21 +75,21 @@ where N is the number of cases in the test set, M is the number of class labels,
 
 | Algorithms | Parameters | Logloss |
 | - | - | - |
-| Random Forest | Default Scikit-Learn Parameters | 15.75366 |
-| Extra tree classifier | Default Scikit-Learn Parameters | 17.76022 |
-| BernoulliNB | Default Scikit-Learn Parameters | 2.66776 |
-| LightGBM | Default Scikit-Learn Parameters | 7.72007 |
+| Random Forest | Default Scikit-Learn Parameters | 15.78563 |
+| Extra tree classifier | Default Scikit-Learn Parameters | 17.8415 |
+| BernoulliNB | Default Scikit-Learn Parameters | 2.66780 |
+| LightGBM | Default Scikit-Learn Parameters | 6.37198 |
 | Catboost | Default Scikit-Learn Parameters | / |
 
 ### After parameter tuning
 
 | Algorithms | Parameters | Logloss |
 | - | - | - |
-| Random Forest | Custom Parameters | 2.65477 |
-| Extra tree classifier | Custom Parameters | 2.60203 |
-| BernoulliNB | Custom Parameters | 2.66776 |
-| LightGBM | Custom Parameters | 2.32040 |
-| Catboost | Custom Parameters | 2.51918 |
+| Random Forest | Custom Parameters | 2.65493 |
+| Extra tree classifier | Custom Parameters | 2.60370 |
+| BernoulliNB | Custom Parameters | 2.6678 |
+| LightGBM | Custom Parameters | 2.32076 |
+| Catboost | Custom Parameters | 2.52154 |
 
 
 ## Improvements
