@@ -75,21 +75,21 @@ where N is the number of cases in the test set, M is the number of class labels,
 
 | Algorithms | Parameters | Logloss |
 | - | - | - |
-| Random Forest | Default Scikit-Learn Parameters | 15.75366 |
-| Extra tree classifier | Default Scikit-Learn Parameters | 17.76022 |
-| BernoulliNB | Default Scikit-Learn Parameters | 2.66776 |
-| LightGBM | Default Scikit-Learn Parameters | 7.72007 |
+| Random Forest | Default Scikit-Learn Parameters | 15.78563 |
+| Extra tree classifier | Default Scikit-Learn Parameters | 17.8415 |
+| BernoulliNB | Default Scikit-Learn Parameters | 2.66780 |
+| LightGBM | Default Scikit-Learn Parameters | 6.37198 |
 | Catboost | Default Scikit-Learn Parameters | / |
 
 ### After parameter tuning
 
 | Algorithms | Parameters | Logloss |
 | - | - | - |
-| Random Forest | Custom Parameters | 2.65477 |
-| Extra tree classifier | Custom Parameters | 2.60203 |
-| BernoulliNB | Custom Parameters | 2.66776 |
-| LightGBM | Custom Parameters | 2.32040 |
-| Catboost | Custom Parameters | 2.51918 |
+| Random Forest | Custom Parameters | 2.65493 |
+| Extra tree classifier | Custom Parameters | 2.60370 |
+| BernoulliNB | Custom Parameters | 2.6678 |
+| LightGBM | Custom Parameters | 2.32076 |
+| Catboost | Custom Parameters | 2.52154 |
 
 
 ## Improvements
