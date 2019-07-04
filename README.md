@@ -65,7 +65,7 @@ Algoriths used for prediction were Random Forest, Extra Tree Classifier, Bernoul
 ## Evaluation Metric
 Models are evaluated using the multi-class logarithmic loss. Each incident has been labeled with one true class. For each incident, you must submit a set of predicted probabilities (one for every class). The formula is:
 
-![alt text](http://www.sciweavers.org/upload/Tex2Img_1561670586/render.png)
+![alt text](http://www.sciweavers.org/upload/Tex2Img_1562236240/render.png)
 
 where N is the number of cases in the test set, M is the number of class labels, log is the natural logarithm, ![alt text](http://www.sciweavers.org/upload/Tex2Img_1561670812/render.png) is 1 if observation i is in class j and 0 otherwise, and ![alt text](http://www.sciweavers.org/upload/Tex2Img_1561670854/render.png) is the predicted probability that observation i belongs to class j.
 
