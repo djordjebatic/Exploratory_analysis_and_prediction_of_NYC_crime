@@ -96,6 +96,8 @@ where N is the number of cases in the test set, M is the number of class labels,
 
 We are sure there is space for improvement. Two additional techniques we would like to implement if there was the necessary time would be:
 
+-Additional parameter tuning
+
 - Introduce aditional data that shows economic, educational, and other socio-economic information for each borough. That way algorithms could notice and exploit patterns asociated with these factors and provide even better score. 
 
 - Use embeddings or other processing techniques for the addresses. For example we could extract if an incident has happened in a block or a crossroad or a boulding etc. There are definitely some additional correlations between incident place and crime commited.
