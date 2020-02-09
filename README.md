@@ -96,7 +96,7 @@ where N is the number of cases in the test set, M is the number of class labels,
 
 We are sure that there is a lot of space for improvement. Two additional techniques we would like to implement if there was the necessary time would be:
 
-- Additional parameter tuning
+- Additional parameter tuning.
 
 - Introduce aditional data that shows economic, educational, and other socio-economic information for each borough. That way algorithms could notice and exploit patterns asociated with these factors and provide even better score. 
 
