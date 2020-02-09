@@ -49,7 +49,7 @@ In machine learning, Naïve Bayes classifiers are a family of simple "probabilis
 #### 4) LightGBM
 A fast, distributed, high performance gradient boosting (GBT, GBDT, GBRT, GBM or MART) framework based on decision tree algorithms, used for ranking, classification and many other machine learning tasks. Project of Microsoft.
 #### 5) CatBoost
-CatBoost is an algorithm for gradient boosting on decision trees. It is developed by Yandex, and is for search, recommendation systems, personal assistance, self-driving cars, weather prediction...
+CatBoost is an algorithm for gradient boosting on decision trees. It is developed by Yandex, and is for search, recommendation systems, personal assistance, self-driving cars, weather prediction etc.
 
 ## Implementation
 
