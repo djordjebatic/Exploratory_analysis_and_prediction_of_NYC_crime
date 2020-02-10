@@ -94,7 +94,7 @@ where N is the number of cases in the test set, M is the number of class labels,
 
 ## Improvements
 
-There is certainly space for improvement. Two additional techniques we would like to implement if there was the necessary time would be:
+We are sure there is space for improvement. Two additional techniques we would like to implement if there was the necessary time would be:
 
 - Additional parameter tuning
 
